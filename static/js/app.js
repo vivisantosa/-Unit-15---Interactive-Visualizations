@@ -82,7 +82,8 @@ function bubbleChart(filteredSample) {
     mode: 'markers',
     marker: {
       color: filteredSample.otu_ids,
-      size: filteredSample.sample_values}
+      colorscale: 'Portland',
+      size: filteredSample.sample_values},
   }];
   var layout = {
     //title: 'Bubble Chart Hover Text',
