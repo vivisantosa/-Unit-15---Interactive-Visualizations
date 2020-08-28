@@ -1,3 +1,15 @@
+<!--
+//  UofT SCS Data Analytics Boot Camp
+//  Unit 15: Interactive-Visualizations-and-Dashboards
+
+
+          <li><a class="navbar-brand" href="index.html">INTERACTIVE VIZUALISATION & DASHBOARDS PROJECT
+          <li style=" position: fixed; right: 30px"><a class="navbar-brand" href="https://vivisantosa.github.io/">MyPage
+            <span style ="font-size:larger" class="glyphicon glyphicon-user"></span> </a></li>
+//  Author:	Vivianti Santosa -->
+
+<!--BELLYBUTTON BIODIVERSITY --> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,48 +19,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .BoxStyle{
+      margin-left:3%;
+      margin-right:3%;
+      margin-bottom:2%}
+    .PanelStyle{
+      font-size: 12pt;
+      text-align: center;} 
+    p{
+      padding-left: 10%;
+      padding-right: 10%;}
+    h5{
+      font-size:12pt}
+  </style>
 </head>
 
-<body>
-
-  <div class="container">
+<body style="background-color:aquamarine">
+  <nav style="margin-bottom: 0; font-size:large;" class="navbar navbar-inverse"> 
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" id="Project_Font" href="index.html">INTERACTIV VISUALIZATION & DASHBOARD PROJECT</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="https://vivisantosa.github.io/"><span class="glyphicon glyphicon-user"></span> MyPage</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  <div class="container-fluid" style="padding: 0; padding-right: 0">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <p>The belly button is one of the habitats closest to us, and yet it remains relatively unexplored. <br>
+           In January 2011, Rob Dunn lab, at North Carolina University, launched Belly Button Biodiversity project to investigate 
+           the microbes inhabiting our navels and the factors that might influence the microscopic life calling this protected, moist patch of skin home. <br>
+           In addition to inspiring scientific curiosity, Belly Button Biodiversity inspired conversations about the beneficial roles microbes play in our daily lives.</p>
       </div>
     </div>
-    <div>
-      <div id="plot"></div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-      <!-- <script src="data/data.json"></script> -->
-      <script src="plot.js"></script>
+  </div>
+
+  <div class="container-fluid">
+    <div class="col-sm-12 BoxStyle">
+      <h2 style="text-align: center;" >Sample Dataset</h2>
+      <h3 style="text-align: center;">Select test number, to explore the interactive charts of the sample dataset</h3>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+
+    <div class="col-sm-12 BoxStyle">
+      <div class="row">
+        <div class="col-md-2 PanelStyle">
+          <div class="well">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h5 class="panel-title">Demographic Info</h5>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div id="bar" class="mx-auto d-block"></div>
+        </div>
+        <div class="col-md-5">
+          <div id="gauge"></div>
         </div>
       </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
+    </div>
+
+    <div class="col-sm-12 BoxStyle">
+      <div class="row">
+        <div class="col-md-12">
+          <div style ="max-width:100%" id="bubble"></div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div style ="width:100%" id="bubble"></div>
-      </div>
-    </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>

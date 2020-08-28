@@ -1,13 +1,18 @@
-//global variable
+// 
+//  UofT SCS Data Analytics Boot Camp
+//  Unit 15: Interactive-Visualizations-and-Dashboards
+//  Author:	Vivianti Santosa 
+//  2020-08-28
+
+//  <!--BELLYBUTTON BIODIVERSITY --> 
+console.log("BELLYBUTTON BIODIVERSITY")
+//create global variable
 var data;
 
-//init function to fill in the select option
-
-//function init() {
-d3.json("../samples.json").then(dataInitial => {
+//initialize data
+d3.json("samples.json").then(dataInitial => {
   // innitialize data  
   data = dataInitial;
-  
 
   // create values for dropdown select values
   var selectValues = dataInitial.names;             // list of sample ids/names
@@ -19,7 +24,6 @@ d3.json("../samples.json").then(dataInitial => {
   });
 });
 
-//------------
 
 // upon the change of the selected item in inputBox (Test Subject ID No.:), 
 // collect input('selectedID'), and display graphs based on 'selectedID'
@@ -28,12 +32,12 @@ d3.selectAll("#selDataset").on("change", plotFunctions);
 function plotFunctions() {
   var selectedID = d3.select("#selDataset").property("value");
   console.log(`selectedID ${selectedID}`);
-  console.log(data);
+  
   var filteredMetadata = data.metadata.filter(value => value.id == selectedID)[0];
   console.log(filteredMetadata);
   var filteredSample = data.samples.filter(value => value.id == selectedID)[0];
   console.log(filteredSample);
-  console.log(filteredSample.sample_values);
+
   panelPlot(filteredMetadata);
   hbarChart(filteredSample);
   bubbleChart(filteredSample);
@@ -42,8 +46,6 @@ function plotFunctions() {
 
 
 function panelPlot(filteredMetadata) {
-  console.log("Panel Plot")
-  console.log(filteredMetadata)
   // select Demographic Info panel (id="sample-metadata") to put data
   var dgraphInfo = d3.select("#sample-metadata");   
   // empty the demographic info panel each time before getting new id info 
@@ -57,7 +59,6 @@ function panelPlot(filteredMetadata) {
 function hbarChart(filteredSample) {
   // transform otu_id - to add the letter "OTU" before the number id
   var OTU_id = (filteredSample.otu_ids.slice(0, 10)).reverse().map(d => "OTU " + d);
-  console.log(`OTU IDS: ${OTU_id}`); 
 
   // create the horizontal bar chart
   var data = [{
@@ -69,7 +70,7 @@ function hbarChart(filteredSample) {
     orientation: 'h'
   }];
     var layout = {
-    title: "Bar Chart"
+      width: 520, height: 380,
   };
   Plotly.newPlot("bar", data, layout); 
 }
@@ -89,7 +90,7 @@ function bubbleChart(filteredSample) {
     //title: 'Bubble Chart Hover Text',
     xaxis: {title: "OTU ID"}, 
     showlegend: false,
-    height: 600,
+    height: 450,
     width: 1400
   };
   Plotly.newPlot('bubble', data, layout);
@@ -101,10 +102,9 @@ function gaugeChart(filteredMetadata) {
   var data = [{
       domain: { x: [0, 1], y: [0, 1] },
       value: filteredMetadata.wfreq,
-      title: { text: "Belly Button Washing Frequency" },
-      subtitle: { text: "Scrubs per Week" },
+      title: { text: "Belly Button Washing Frequency<br> Scrubs per Week" },
       type: "indicator",
-      mode: "gauge+number+delta",
+      mode: "gauge+number",
       gauge: {
         axis: { range: [null, 9] },
         bar: { color: "darkgrey" },
@@ -120,51 +120,8 @@ function gaugeChart(filteredMetadata) {
           { range: [8, 9], color: "ff6600" }
         ]}   
     }];
-  var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+  var layout = { width: 520, height: 380, margin: { t: 0, b: 0 } };
   Plotly.newPlot('gauge', data, layout);
 }
 
 
-
-
-// function gaugeChart(filteredMetadata) {
-//   
-//   var data = [{
-//     type: "indicator",
-//     mode: "gauge+number+delta",
-//     value: 420,
-//     title: { text: "Speed", font: { size: 24 } },
-//     delta: { reference: 400, increasing: { color: "RebeccaPurple" } },
-//     gauge: {
-//       axis: { range: [null, 500], tickwidth: 1, tickcolor: "darkblue" },
-//       bar: { color: "darkblue" },
-//       bgcolor: "white",
-//       borderwidth: 2,
-//       bordercolor: "gray",
-//       steps: [
-//         { range: [0, 250], color: "cyan" },
-//         { range: [250, 400], color: "royalblue" }],
-//       threshold: {
-//         line: { color: "red", width: 4 },
-//         thickness: 0.75,
-//         value: 490}
-//     }
-//   }];
-//   var layout = {
-//     width: 500,
-//     height: 400,
-//     margin: { t: 25, r: 25, l: 25, b: 25 },
-//     paper_bgcolor: "lavender",
-//     font: { color: "darkblue", family: "Arial" }
-//   };
-// }
-// Plotly.newPlot('gauge', data, layout);
-
-
-
-
-  
-
-  
-     
-    
