@@ -5,7 +5,7 @@
 //  2020-08-28
 
 //  <!--BELLYBUTTON BIODIVERSITY --> 
-console.log("BELLYBUTTON BIODIVERSITY")
+
 //create global variable
 var data;
 
@@ -70,7 +70,7 @@ function hbarChart(filteredSample) {
     orientation: 'h'
   }];
     var layout = {
-      width: 520, height: 380,
+      width: 640, height: 400,
   };
   Plotly.newPlot("bar", data, layout); 
 }
@@ -90,8 +90,8 @@ function bubbleChart(filteredSample) {
     //title: 'Bubble Chart Hover Text',
     xaxis: {title: "OTU ID"}, 
     showlegend: false,
-    height: 450,
-    width: 1400
+    height: 400,
+    width: 1350 
   };
   Plotly.newPlot('bubble', data, layout);
 }
@@ -120,7 +120,7 @@ function gaugeChart(filteredMetadata) {
           { range: [8, 9], color: "ff6600" }
         ]}   
     }];
-  var layout = { width: 520, height: 380, margin: { t: 0, b: 0 } };
+  var layout = { width: 640, height: 400, margin: { t: 0, b: 0 } };
   Plotly.newPlot('gauge', data, layout);
 }
 
