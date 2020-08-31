@@ -91,7 +91,7 @@ function bubbleChart(filteredSample) {
     xaxis: {title: "OTU ID"}, 
     showlegend: false,
     height: 400,
-    width: 1350 
+    width: 1370 
   };
   Plotly.newPlot('bubble', data, layout);
 }

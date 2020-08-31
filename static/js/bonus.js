@@ -41,7 +41,7 @@ var data = [{
 }];
 
 var layout = { width: 400, height: 400,
-    title: 'Taxonomy of 20 most popular Belly Button Criteria',
+    title: 'Taxonomy of 20 most common Belly Button Bacteria',
   "margin": {"l": 20, "r": 20, "b": 10, "t": 60},
   paper_bgcolor: 'rgb(243, 243, 243)',
   plot_bgcolor: 'rgb(243, 243, 243)',
