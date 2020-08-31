@@ -29,6 +29,7 @@ The dashboard is to be created using HTML, d3, and javascript, using graphs from
     - Bubble Chart 
     - Gauge Chart
 
-## EXTRA <img  align="right" src="/Images/sunburst.png" width="30%"><br>
+## EXTRA 
 In addition to the chart above I created a sunburst chart with data from the website. Instead of using sample data, the sunburst chart uses the whole project data and shows the taxonomy of the 20 most common bacteria.  <br>
 To create this chart the data is rearranged according to parents - children system requires for this type of charts.
+<img  src="/Images/sunburst1.png" width="70%"><br>
