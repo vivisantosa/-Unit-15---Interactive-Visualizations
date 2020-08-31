@@ -10,13 +10,11 @@ Author: Vivianti Santosa <br>
 Date: 2020-08-31 <br><br>
 
 #### https://vivisantosa.github.io/Unit-15-Interactive-Visualizations/index.html<br><br>
-
+<img align="right" src="Images/Screenshot 1.png" width="50%">
 This assignment is to create an interactive dashboard for the Belly Button Biodiversity project, which catalogs the microbes that colonize human navels. <br>
 The Belly Button Biodiversity dataset catalogs the microbes that colonize human navels. The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 The dashboard will allow visitors to explore the biodiversity and the metadata (information about the person behind the sample) of each sample, by choosing a sample number.<br>
 Please enjoy our Belly Button Dashboard with the link above. <br>
-
-<img src="Images/Screenshot 1.png" width="540"><br>
 
 The dashboard is to be created using HTML, d3, and javascript, using graphs from Plotly library. The steps to create the dashboard is as follow :<br>
 
@@ -26,11 +24,11 @@ The data for this project is provided in samples.json file. It is uploaded and r
 ### Step 2 : Create dropdown menu and populate it with information from the global data.<br>
 
 ### Step 3 : Create graphs with Plotly library and display it in assigned ligation in the HTML dashboard.  <br>
-Dynamic Table
-Horizontal Bar Chart 
-Bubble Chart 
-Gauge Chart
+- Dynamic Table
+- Horizontal Bar Chart 
+- Bubble Chart 
+- Gauge Chart
 
-## EXTRA<br>
+## EXTRA
 <img  align="right" src="/Images/sunburst.png" width="30%"><br>
 In addition to the chart above I created a sunburst chart with data from the website. Instead of using sample data, the sunburst chart uses the whole project data and shows the taxonomy of the 20 most common bacteria.  <br>
