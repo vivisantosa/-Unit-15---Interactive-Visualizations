@@ -24,12 +24,11 @@ The dashboard is to be created using HTML, d3, and javascript, using graphs from
 2. Create dropdown menu and populate it with information from the global data.<br>
 
 3. Create graphs with Plotly library and display it in assigned ligation in the HTML dashboard.  <br>
-- Dynamic Table
-- Horizontal Bar Chart 
-- Bubble Chart 
-- Gauge Chart
+  - Dynamic Table
+  - Horizontal Bar Chart 
+  - Bubble Chart 
+  - Gauge Chart
 
-## EXTRA
-<img  align="right" src="/Images/sunburst.png" width="30%"><br>
+## EXTRA <img  align="right" src="/Images/sunburst.png" width="30%"><br>
 In addition to the chart above I created a sunburst chart with data from the website. Instead of using sample data, the sunburst chart uses the whole project data and shows the taxonomy of the 20 most common bacteria.  <br>
 To create this chart the data is rearranged according to parents - children system requires for this type of charts.
