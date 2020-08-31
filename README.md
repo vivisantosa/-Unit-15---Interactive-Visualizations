@@ -1,11 +1,10 @@
-# Belly Button Biodiversity <br>
+# Belly Button Biodiversity Project<br>
 <img src="http://robdunnlab.com/wp-content/uploads/microbes-sem.jpg" width="1080"><br>
 
-# Belly Button Biodiversity Project<br>
 The belly button is one of the habitats closest to us, and yet it remains relatively unexplored. In January 2011, Rob Dunn lab at North Carolina State University launched Belly Button Biodiversity project to investigate the microbes inhabiting our navels and the factors that might influence the microscopic life calling this protected, moist patch of skin home. In addition to inspiring scientific curiosity, Belly Button Biodiversity inspired conversations about the beneficial roles microbes play in our daily lives.<br>
 http://robdunnlab.com/projects/belly-button-biodiversity/#:~:text=The%20coolest%20study%20of%20biodiversity,yet%20it%20remains%20relatively%20unexplored.&text=In%20addition%20to%20inspiring%20scientific,play%20in%20our%20daily%20lives.<br>
 
-# Unit-15 Interactive Visualizations and Dashboards
+## Unit-15 Interactive Visualizations and Dashboards
 Author: Vivianti Santosa <br>
 Date: 2020-08-31 <br><br>
 
